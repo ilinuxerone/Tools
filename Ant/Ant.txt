@@ -1,0 +1,55 @@
+Ant(Another neat tool)
+
+Ant每个生成文件由单个project元素组成组成，该元素
+又包含一个或者多个target元素。一个目标是生成过程中
+已定义的一个步骤，它执行任意数量的操作，比如编译一组
+源文件。
+
+Ant 属性、目标、依赖 
+Ant中的属性不可更改。
+定义与使用属性
+1定义：
+<property name="meta" value="value"/>
+
+2.使用
+${meta}
+
+依赖：
+1 depends
+
+
+命令：
+1）编译源代码：
+
+<javac srcdir="src"  destdir="dest">
+
+其他有用的属性：
+-classpath=
+-debug="true"
+
+
+2）创建jar文件
+<jar destfile=" "  basedir=" ">
+
+3)时间戳
+<tstamp> </tstamp>
+
+文件系统操作
+<mkdir dir="">
+<delete dir="">
+<copy file="src/test.java"  tofile="">
+<move file=""  tofile="">
+<copy file=""  todir="">
+<copy todir="">
+<fileset>
+<include name="*.java">
+</fileset>
+</copy>
+<move file=""  todir="">
+<zip destfile="output.zip" basedir="output">
+<unzip src=""  dest="">
+
+<replace file=""  token="old"  value="newvalue">
+支持模式匹配
+
+
